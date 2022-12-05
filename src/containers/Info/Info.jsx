@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 export function Info() {
   return (
@@ -10,13 +11,13 @@ export function Info() {
         </div>
       </div>
       <div className="Monster-Desc">
-        <textarea />
         <img
           src="https://www.socialdub.com/groupspictures/7888/7888808021751257996.jpg?x2"
           alt=""
-          width={300}
-          height={300}
+          width={400}
+          height={400}
         />
+        <textarea />
         <div>
           <select>
             <option>Animais</option>

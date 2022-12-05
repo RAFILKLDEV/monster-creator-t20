@@ -1,0 +1,38 @@
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.Monster-Bar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 3px var(--red) solid;
+}
+
+.Monster-Bar input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  font-size: 1.2em;
+}
+
+.Monster-Bar div {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Monster-Desc {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 3px var(--red) solid;
+}
+
+.Monster-Desc select {
+  font-size: 1rem;
+}

@@ -1,0 +1,8 @@
+.Monster-Stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.Monster-Defense {
+  display: flex;
+}

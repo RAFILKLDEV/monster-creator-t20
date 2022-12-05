@@ -3,20 +3,44 @@
   min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: repeat;
   background-size: contain;
   gap: 100px;
+  flex-wrap: wrap;
 }
 
-.Monster-Creator,
-.Npc-Helper {
-  border: var(--red) solid 3px;
-  padding: 20px;
+.Monster-Creator {
+  display: flex;
+  flex-direction: column;
   font-size: 1.2rem;
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: no-repeat;
   background-size: cover;
+  flex-wrap: wrap;
+  max-height: 1000px;
+  gap: 0px;
+}
+
+.Teste {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 900px;
+  flex-wrap: wrap;
+}
+
+.Info {
+  border: var(--red) solid 3px;
+  border-bottom: none;
+  padding: 20px;
+}
+
+.Stats {
+  border: var(--red) solid 3px;
+  border-top: none;
+  padding: 20px;
 }

@@ -1,0 +1,7 @@
+.Monster-Attribute {
+  padding-bottom: 15px;
+  display: inline-flex;
+  border-bottom: 3px var(--red) solid;
+  justify-content: center;
+  width: 100%;
+}

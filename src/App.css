@@ -23,14 +23,7 @@
   flex-wrap: wrap;
   max-height: 1000px;
   gap: 0px;
-}
-
-.Teste {
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  width: 900px;
-  flex-wrap: wrap;
+  width: 500px;
 }
 
 .Info {
@@ -41,6 +34,14 @@
 
 .Stats {
   border: var(--red) solid 3px;
+  border-bottom: none;
   border-top: none;
-  padding: 20px;
+  padding: 0px 20px 15px;
+}
+
+.Attribute {
+  border: var(--red) solid 3px;
+  border-bottom: none;
+  border-top: none;
+  padding: 0px 20px 15px;
 }

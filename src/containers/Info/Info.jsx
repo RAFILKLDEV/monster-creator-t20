@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 export function Info() {
+  const [name, setName] = useState("Dragão Negro de Olhos Vermelhos");
   return (
     <div className="Info">
       <div className="Monster-Info">
         <div className="Monster-Bar">
-          <input type="text" value={"Dragão Negro de Olhos Vermelhos"} />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <div className="Monster-Nd">5</div>
         </div>
       </div>
@@ -14,7 +19,7 @@ export function Info() {
         <img
           src="https://www.socialdub.com/groupspictures/7888/7888808021751257996.jpg?x2"
           alt=""
-          width={400}
+          width={500}
           height={400}
         />
         <textarea />

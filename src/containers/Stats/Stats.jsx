@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.css"
 import ComboLabel from "../../components/ComboLabel/ComboLabel";
+import "./styles.css"
 
 export function Stats() {
   return (

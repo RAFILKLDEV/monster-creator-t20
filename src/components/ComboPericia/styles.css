@@ -1,0 +1,17 @@
+.ComboPericia {
+  display: inline-flex;
+}
+
+.ComboPericia input {
+  font-size: 1.15rem;
+  padding: 0px;
+  border: none;
+  background-color: inherit;
+  text-align: center;
+  width: 35px;
+}
+
+.ComboPericia input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}

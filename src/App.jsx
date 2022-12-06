@@ -5,6 +5,7 @@ import { Stats } from "./containers/Stats/Stats";
 import "./App.css";
 
 function App() {
+  const [nd, setNd] = useState(0);
   const [att, setAtt] = useState({
     FOR: 0,
     DES: 0,
@@ -17,9 +18,9 @@ function App() {
   return (
     <div className="App">
       <div className="Monster-Creator">
-        <Info />
-        <Stats />
-        <Attribute att={att} setAtt={setAtt}  />
+        <Info nd={nd} setND={setNd} />
+        <Stats nd={nd} att={att} />
+        <Attribute att={att} setAtt={setAtt} />
         <div className="Attribute"></div>
         <div className="Combat"></div>
         <div className="Extras"></div>

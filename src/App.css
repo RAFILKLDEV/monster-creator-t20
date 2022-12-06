@@ -29,19 +29,19 @@
 .Info {
   border: var(--red) solid 3px;
   border-bottom: none;
-  padding: 20px;
+  padding: 10px 15px 10px;
 }
 
 .Stats {
   border: var(--red) solid 3px;
   border-bottom: none;
   border-top: none;
-  padding: 0px 20px 15px;
+  padding: 0px 15px 10px;
 }
 
 .Attribute {
   border: var(--red) solid 3px;
   border-bottom: none;
   border-top: none;
-  padding: 0px 20px 15px;
+  padding: 0px 20px 10px;
 }

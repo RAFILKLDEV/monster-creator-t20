@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { tabela } from "../../constants";
 import "./styles.css";
 
-export function Info() {
+export function Info(props) {
   const [name, setName] = useState("Dragão Negro de Olhos Vermelhos");
   return (
     <div className="Info">
@@ -12,7 +13,7 @@ export function Info() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <div className="Monster-Nd">5</div>
+          <div className="Monster-Nd">{tabela[props.nd][0]}</div>
         </div>
       </div>
       <div className="Monster-Desc">

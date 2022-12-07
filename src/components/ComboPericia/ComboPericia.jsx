@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { pericias } from "../../constants";
 import "./styles.css";
 
 const ComboPericia = (props) => {
@@ -12,11 +11,16 @@ const ComboPericia = (props) => {
     return props.nd - 1;
   }
 
+  function calcPericia() {
+    const result = props.pericias.findIndex((e) => e.name === props.name);
+    return props.pericias[result].mod;
+  }
+
   return (
     <div className="ComboPericia">
       <span className="ComboLabel-Label">{props.name} :&nbsp;</span>
       <div>
-        {Math.floor(calcNd() / 2) + props.att.FOR + Number(extra)}
+        {Math.floor(calcNd() / 2) + props.att[calcPericia()] + Number(extra)}
         <input
           type="number"
           value={extra}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Attribute from "./containers/Attribute/Attribute";
 import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
+import Skills from "./containers/Skills/Skills";
 import "./App.css";
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
   const [pericias, setPericias] = useState([
     { name: "Acrobacia", trained: false, mod: "DES" },
     { name: "Adestramento", trained: false, mod: "CAR" },
-    { name: "Atuação", trained: false, mod: "CAR" },
+    { name: "Atuação", trained: true, mod: "CAR" },
     { name: "Cavalgar", trained: false, mod: "DES" },
     { name: "Conhecimento", trained: false, mod: "INT" },
-    { name: "Cura", trained: false, mod: "SAB" },
+    { name: "Cura", trained: true, mod: "SAB" },
     { name: "Diplomacia", trained: false, mod: "CAR" },
     { name: "Enganação", trained: false, mod: "CAR" },
     { name: "Furtividade", trained: false, mod: "DES" },
@@ -46,6 +47,7 @@ function App() {
         <Info nd={nd} setND={setNd} />
         <Stats nd={nd} att={att} pericias={pericias} />
         <Attribute att={att} setAtt={setAtt} />
+        <Skills nd={nd} att={att} pericias={pericias} />
         <div className="Attribute"></div>
         <div className="Combat"></div>
         <div className="Extras"></div>

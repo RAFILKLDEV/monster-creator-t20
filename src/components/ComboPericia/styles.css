@@ -2,16 +2,30 @@
   display: inline-flex;
 }
 
+.ComboLabel-Input {
+  display: flex;
+  align-items: baseline;
+}
+
+.ComboLabel-Input div{
+  width: 20px;
+}
+
 .ComboPericia input {
+  display: none;
   font-size: 1.15rem;
   padding: 0px;
   border: none;
   background-color: inherit;
   text-align: center;
-  width: 35px;
+  width: 30px;
 }
 
 .ComboPericia input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.ComboPericia:hover input {
+  display: block;
 }

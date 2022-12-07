@@ -1,0 +1,6 @@
+.Monster-Skills {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  border-bottom: 3px var(--red) solid;
+}

@@ -19,8 +19,10 @@ const ComboPericia = (props) => {
   return (
     <div className="ComboPericia">
       <span className="ComboLabel-Label">{props.name} :&nbsp;</span>
-      <div>
-        {Math.floor(calcNd() / 2) + props.att[calcPericia()] + Number(extra)}
+      <div className="ComboLabel-Input">
+        <div>
+          {Math.floor(calcNd() / 2) + props.att[calcPericia()] + Number(extra)}
+        </div>
         <input
           type="number"
           value={extra}

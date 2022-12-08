@@ -4,6 +4,7 @@ import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
 import Skills from "./containers/Skills/Skills";
 import "./App.css";
+import { Combat } from "./containers/Combat/Combat";
 
 function App() {
   const [nd, setNd] = useState(3);
@@ -48,8 +49,7 @@ function App() {
         <Stats nd={nd} att={att} pericias={pericias} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />
-        <div className="Attribute"></div>
-        <div className="Combat"></div>
+        <Combat />
         <div className="Extras"></div>
       </div>
     </div>

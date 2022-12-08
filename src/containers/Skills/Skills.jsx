@@ -20,6 +20,7 @@ export function Skills(props) {
                 />
               );
             }
+            return null;
           })}
         </div>
       </div>

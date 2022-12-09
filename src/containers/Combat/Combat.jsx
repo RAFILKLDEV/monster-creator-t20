@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { InputBox } from "../../components/InputBox/InputBox";
 
 export function Combat() {
   return (
     <div className="Combat">
       <div className="Monster-Combat">
-        <InputBox />
+        <InputBox placeholder="Habilidade" />
       </div>
     </div>
   );

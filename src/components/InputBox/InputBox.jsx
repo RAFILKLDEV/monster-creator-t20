@@ -1,38 +1,25 @@
 import React, { useRef, useState } from "react";
+import "./styles.css";
 
 export function InputBox(props) {
   const [input, setInput] = useState("");
-  const [name, setName] = useState("");
-  const textBox = useRef();
+  const [name, setName] = useState("Habilidade");
 
   return (
     <div className="InputBox">
+      <div>
+        <b>{name}</b>
+        {input}
+      </div>
       <input
-        style={{
-          border: "none",
-          backgroundColor: "inherit",
-          fontWeight: 600,
-          fontSize: 18,
-          width: "100%",
-        }}
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Nome..."
       />
       <textarea
-        className="TextBox"
-        onChange={() => {
-          textBox.current.style.height = "22px";
-          textBox.current.style.height = `${
-            textBox.current.scrollHeight - 13
-          }px`;
-        }}
-        ref={textBox}
-        defaultValue={input}
-        onBlur={(e) => setInput(e.target.value)}
-        placeholder={props.placeholder}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="D"
       ></textarea>
     </div>
   );
 }
-

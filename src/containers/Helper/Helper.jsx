@@ -1,13 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Menu } from "../../components/Menu/Menu";
+import TrainedSkills from "../../components/TrainedSkills/TrainedSkills";
 import "./styles.css";
 
-export function Helper() {
+export function Helper(props) {
   const [image, setImage] = useState("");
 
   const tabImage = useRef();
   const tabTutorial = useRef();
   const tabImageBox = useRef();
+  const tabPericias = useRef();
 
   return (
     <div className="Helper">
@@ -55,6 +57,49 @@ export function Helper() {
             </button>
           </div>
         </div>
+      </Menu>
+      <Menu name="Pericias">
+        <div>
+          <button onClick={() => (tabPericias.current.style.display = "block")}>
+            Pericias
+          </button>
+          <div ref={tabPericias} className="Npc-Helper-Pericias">
+            <button
+              onClick={() => (tabPericias.current.style.display = "none")}
+            >
+              Fechar
+            </button>
+            <div className="Npc-Helper-List">
+              {props.pericias.map((e) => {
+                if (e.name === null) {
+                  return null;
+                } else {
+                  return (
+                    <TrainedSkills
+                      name={e.name}
+                      pericias={props.pericias}
+                      key={e.name}
+                      setPericias={props.setPericias}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
+        </div>
+      </Menu>
+      <Menu name="Extras">
+        {/* {extras.map((e, i) => (
+          <Extras
+            name={e.name}
+            key={e.name}
+            extras={extras}
+            setExtras={setExtras}
+            number={e.number}
+            checked={e.marked}
+            index={i}
+          />
+        ))} */}
       </Menu>
     </div>
   );

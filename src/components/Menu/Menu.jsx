@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export function Menu({ name, children }) {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   return (
     <div className="Menu">
       <div

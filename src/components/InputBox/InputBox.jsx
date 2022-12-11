@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-export function InputBox(props) {
+export function InputBox() {
   const [input, setInput] = useState("");
   const [name, setName] = useState("Habilidade");
 

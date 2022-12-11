@@ -40,7 +40,7 @@ const AttributeStat = (props) => {
       className="ComboLabel"
       style={{
         display: "inline-flex",
-        alignItems: "center",
+        alignItems: "baseline",
       }}
     >
       <div className="ComboLabel-Label">{props.name} : </div>

@@ -1,0 +1,9 @@
+.Menu {
+  display: flex;
+  font-size: 22;
+  margin-bottom: 10;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  cursor: pointer;
+}

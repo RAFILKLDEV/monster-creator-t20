@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Attribute from "./containers/Attribute/Attribute";
 import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
 import Skills from "./containers/Skills/Skills";
 import "./App.css";
 import { Combat } from "./containers/Combat/Combat";
+import { Helper } from "./containers/Helper/Helper";
 
 function App() {
   const [nd, setNd] = useState(3);
@@ -42,8 +43,62 @@ function App() {
     { name: "Sobrevivência", trained: false, mod: "SAB" },
   ]);
 
+  const tabPericias = useRef();
+  const tabAbout = useRef();
+
   return (
     <div className="App">
+      <Helper />
+      {/* <div className="Npc-Helper">
+        <div>
+          <div className="Npc-Helper-Title">Pericias</div>
+          <button onClick={() => (tabPericias.current.style.display = "block")}>
+            Pericias
+          </button>
+          <div ref={tabPericias} className="Npc-Helper-Pericias">
+            <button
+              onClick={() => (tabPericias.current.style.display = "none")}
+            >
+              Fechar
+            </button>
+            <div className="Npc-Helper-List">
+              {pericias.map((e) => {
+                if (e.name === null) {
+                  return null;
+                } else {
+                  return (
+                    <Pericias
+                      name={e.name}
+                      pericias={pericias}
+                      key={e.name}
+                      setPericias={setPericias}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="Npc-Helper-Title">Extras</div>
+        </div>
+        {extras.map((e, i) => (
+          <Extras
+            name={e.name}
+            key={e.name}
+            extras={extras}
+            setExtras={setExtras}
+            number={e.number}
+            checked={e.marked}
+            index={i}
+          />
+        ))}
+
+        <div>
+          <div className="Npc-Helper-Title">Criar Ficha</div>
+          <button onClick={() => {}}>Criar Png</button>
+        </div>
+      </div> */}
       <div className="Monster-Creator">
         <Info nd={nd} setND={setNd} />
         <Stats nd={nd} att={att} pericias={pericias} />

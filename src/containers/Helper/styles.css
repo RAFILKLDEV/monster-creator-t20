@@ -11,6 +11,12 @@
   background-size: cover;
 }
 
+.Helper-Skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
 .Tutorial {
   font-size: 1.4rem;
   width: 100%;

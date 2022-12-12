@@ -59,33 +59,21 @@ export function Helper(props) {
         </div>
       </Menu>
       <Menu name="Pericias">
-        <div>
-          <button onClick={() => (tabPericias.current.style.display = "block")}>
-            Pericias
-          </button>
-          <div ref={tabPericias} className="Npc-Helper-Pericias">
-            <button
-              onClick={() => (tabPericias.current.style.display = "none")}
-            >
-              Fechar
-            </button>
-            <div className="Npc-Helper-List">
-              {props.pericias.map((e) => {
-                if (e.name === null) {
-                  return null;
-                } else {
-                  return (
-                    <TrainedSkills
-                      name={e.name}
-                      pericias={props.pericias}
-                      key={e.name}
-                      setPericias={props.setPericias}
-                    />
-                  );
-                }
-              })}
-            </div>
-          </div>
+        <div className="Helper-Skills">
+          {props.pericias.map((e) => {
+            if (e.name === null) {
+              return null;
+            } else {
+              return (
+                <TrainedSkills
+                  name={e.name}
+                  pericias={props.pericias}
+                  key={e.name}
+                  setPericias={props.setPericias}
+                />
+              );
+            }
+          })}
         </div>
       </Menu>
       <Menu name="Extras">

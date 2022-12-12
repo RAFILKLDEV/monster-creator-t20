@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 
 const TrainedSkills = (props) => {
-  const input = useRef();
-
   const trained = () => {
     const values = [...props.pericias];
 
@@ -18,10 +16,11 @@ const TrainedSkills = (props) => {
         display: "flex",
         justifyContent: "space-between",
         padding: 10,
+        width: "auto",
       }}
     >
       <span className="ComboLabel-Label">{props.name}</span>
-      <input onChange={trained} ref={input} type="checkbox" />
+      <input onChange={trained} type="checkbox" />
     </div>
   );
 };

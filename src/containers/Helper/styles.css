@@ -17,6 +17,12 @@
   width: 100%;
 }
 
+.Helper-Extras {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .Tutorial {
   font-size: 1.4rem;
   width: 100%;

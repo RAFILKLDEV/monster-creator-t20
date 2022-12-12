@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Extras from "../../components/Extras/Extras";
 import { Menu } from "../../components/Menu/Menu";
 import TrainedSkills from "../../components/TrainedSkills/TrainedSkills";
 import "./styles.css";
@@ -77,17 +78,24 @@ export function Helper(props) {
         </div>
       </Menu>
       <Menu name="Extras">
-        {/* {extras.map((e, i) => (
-          <Extras
-            name={e.name}
-            key={e.name}
-            extras={extras}
-            setExtras={setExtras}
-            number={e.number}
-            checked={e.marked}
-            index={i}
-          />
-        ))} */}
+        <div className="Helper-Extras">
+          {props.extras.map((e, i) => (
+            <Extras
+              name={e.name}
+              key={e.name}
+              extras={props.extras}
+              setExtras={props.setExtras}
+              number={e.number}
+              checked={e.marked}
+              index={i}
+            />
+          ))}
+        </div>
+      </Menu>
+      <Menu name="Gerar Ficha">
+        <div className="Npc-Helper">
+          <button onClick={() => {}}>Criar Png</button>
+        </div>
       </Menu>
     </div>
   );

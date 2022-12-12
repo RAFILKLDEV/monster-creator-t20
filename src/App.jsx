@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Attribute from "./containers/Attribute/Attribute";
 import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
@@ -20,10 +20,10 @@ function App() {
   const [pericias, setPericias] = useState([
     { name: "Acrobacia", trained: false, mod: "DES" },
     { name: "Adestramento", trained: false, mod: "CAR" },
-    { name: "Atuação", trained: true, mod: "CAR" },
+    { name: "Atuação", trained: false, mod: "CAR" },
     { name: "Cavalgar", trained: false, mod: "DES" },
     { name: "Conhecimento", trained: false, mod: "INT" },
-    { name: "Cura", trained: true, mod: "SAB" },
+    { name: "Cura", trained: false, mod: "SAB" },
     { name: "Diplomacia", trained: false, mod: "CAR" },
     { name: "Enganação", trained: false, mod: "CAR" },
     { name: "Furtividade", trained: false, mod: "DES" },
@@ -42,26 +42,29 @@ function App() {
     { name: "Religião", trained: false, mod: "SAB" },
     { name: "Sobrevivência", trained: false, mod: "SAB" },
   ]);
-
-  const tabAbout = useRef();
+  const [extras, setExtras] = useState([
+    { name: "CD", marked: false, number: null },
+    { name: "Mana", marked: false, number: null },
+    { name: "Corpo-a-Corpo", marked: true, number: null },
+    { name: "A Distancia", marked: false, number: null },
+    { name: "Habilidades", marked: false, number: null },
+    { name: "Equipamentos", marked: false, number: null },
+  ]);
 
   return (
     <div className="App">
-      <Helper pericias={pericias} setPericias={setPericias} />
-      {/* <div className="Npc-Helper">
-       
-
-        <div>
-          <div className="Npc-Helper-Title">Criar Ficha</div>
-          <button onClick={() => {}}>Criar Png</button>
-        </div>
-      </div> */}
+      <Helper
+        pericias={pericias}
+        setPericias={setPericias}
+        extras={extras}
+        setExtras={setExtras}
+      />
       <div className="Monster-Creator">
         <Info nd={nd} setND={setNd} />
         <Stats nd={nd} att={att} pericias={pericias} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />
-        <Combat />
+        <Combat extras={extras} />
         <div className="Extras"></div>
       </div>
     </div>

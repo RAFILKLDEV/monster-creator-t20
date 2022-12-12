@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export function InputBox() {
+export function InputBox(props) {
   const [input, setInput] = useState("");
-  const [name, setName] = useState("Habilidade");
+  const [name, setName] = useState(props.placeholder);
 
   return (
     <div className="InputBox">
       <div>
         <b>{name}</b>
-        {input}
+        {" " + input}
       </div>
       <input
         value={name}
@@ -18,7 +18,7 @@ export function InputBox() {
       />
       <textarea
         onChange={(e) => setInput(e.target.value)}
-        placeholder="D"
+        placeholder="Descrição"
       ></textarea>
     </div>
   );

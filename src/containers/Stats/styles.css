@@ -13,7 +13,10 @@
 
 .Monster-Hp {
   display: flex;
-  flex-direction: column;
+}
+
+.Monster-Extras {
+  display: flex;
   padding-bottom: 15px;
   border-bottom: 3px var(--red) solid;
 }

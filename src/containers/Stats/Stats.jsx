@@ -23,14 +23,17 @@ export function Stats(props) {
         />
       </div>
       <div className="Monster-Defense">
-        <ComboLabel name="Defesa" nd={1} n={3} />
-        <ComboLabel name="Fort" nd={1} n={3} />
-        <ComboLabel name="Ref" nd={1} n={3} />
-        <ComboLabel name="Von" nd={1} n={3} />
+        <ComboLabel name="Defesa" nd={props.nd} n={3} />
+        <ComboLabel name="Fort" nd={props.nd} n={3} />
+        <ComboLabel name="Ref" nd={props.nd} n={3} />
+        <ComboLabel name="Von" nd={props.nd} n={3} />
       </div>
       <div className="Monster-Hp">
         <ComboLabel name="Pontos de Vida" nd={1} n={7} />
-        <Mana name="Mana" nd={props.nd} n={7} />
+      </div>
+      <div className="Monster-Extras">
+        {props.extras[1].marked && <Mana name="Mana" nd={props.nd} n={7} />}
+        {props.extras[0].marked && <ComboLabel name="CD" nd={props.nd} n={8} />}
       </div>
     </div>
   );

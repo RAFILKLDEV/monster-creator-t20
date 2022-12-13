@@ -8,7 +8,7 @@ import { Helper } from "./containers/Helper/Helper";
 import "./App.css";
 
 function App() {
-  const [nd, setNd] = useState(3);
+  const [nd, setNd] = useState(1);
   const [att, setAtt] = useState({
     FOR: 0,
     DES: 0,
@@ -64,7 +64,7 @@ function App() {
         <Stats nd={nd} att={att} pericias={pericias} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />
-        <Combat extras={extras} />
+        <Combat extras={extras} nd={nd}/>
         <div className="Extras"></div>
       </div>
     </div>

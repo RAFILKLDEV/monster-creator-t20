@@ -1,5 +1,6 @@
 import React from "react";
 import { InputBox } from "../../components/InputBox/InputBox";
+import { tabela } from "../../constants";
 
 export function Combat(props) {
   const renderInputBox = (n) => {
@@ -20,6 +21,7 @@ export function Combat(props) {
   };
   return (
     <div className="Combat">
+      <div>Ataque +{tabela[props.nd][3]}</div>
       <div className="Monster-Combat">
         {props.extras[2].marked && renderInputBox(2)}
         {props.extras[3].marked && renderInputBox(3)}

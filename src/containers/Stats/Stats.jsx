@@ -1,4 +1,5 @@
 import React from "react";
+import Mana from "../../components/ComboGeneric/ComboGeneric";
 import ComboLabel from "../../components/ComboLabel/ComboLabel";
 import ComboPericia from "../../components/ComboPericia/ComboPericia";
 import "./styles.css";
@@ -28,9 +29,8 @@ export function Stats(props) {
         <ComboLabel name="Von" nd={1} n={3} />
       </div>
       <div className="Monster-Hp">
-        {/* <ComboPericia name="Pontos de Vida" att={props.att} nd={props.nd} />
-        <ComboPericia name="Mana" att={props.att} nd={props.nd} />
-        <ComboPericia name="Deslocamneto" att={props.att} nd={props.nd} /> */}
+        <ComboLabel name="Pontos de Vida" nd={1} n={7} />
+        <Mana name="Mana" nd={props.nd} n={7} />
       </div>
     </div>
   );

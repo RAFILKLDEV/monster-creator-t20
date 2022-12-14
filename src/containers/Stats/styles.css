@@ -17,6 +17,9 @@
 
 .Monster-Extras {
   display: flex;
+}
+
+.Monster-Speed {
   padding-bottom: 15px;
   border-bottom: 3px var(--red) solid;
 }

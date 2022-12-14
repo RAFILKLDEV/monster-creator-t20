@@ -55,3 +55,5 @@ export const pericias = [
   { name: "Sobrevivência", trained: false },
   { name: "Vontade", trained: false },
 ];
+
+export const deslocamento = [4.5, 6, 9, 12, 15, 18, 24, 36];

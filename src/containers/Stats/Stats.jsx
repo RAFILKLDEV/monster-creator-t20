@@ -2,6 +2,7 @@ import React from "react";
 import Mana from "../../components/ComboGeneric/ComboGeneric";
 import ComboLabel from "../../components/ComboLabel/ComboLabel";
 import ComboPericia from "../../components/ComboPericia/ComboPericia";
+import Speed from "../../components/Speed/Speed";
 import "./styles.css";
 
 export function Stats(props) {
@@ -34,6 +35,9 @@ export function Stats(props) {
       <div className="Monster-Extras">
         {props.extras[1].marked && <Mana name="Mana" nd={props.nd} n={7} />}
         {props.extras[0].marked && <ComboLabel name="CD" nd={props.nd} n={8} />}
+      </div>
+      <div className="Monster-Speed">
+        <Speed />
       </div>
     </div>
   );

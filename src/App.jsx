@@ -49,6 +49,7 @@ function App() {
     { name: "A Distancia", marked: false, number: null },
     { name: "Habilidades", marked: false, number: null },
     { name: "Equipamentos", marked: false, number: null },
+    { name: "Tesouros", marked: false, number: null },
   ]);
 
   return (
@@ -61,10 +62,10 @@ function App() {
       />
       <div className="Monster-Creator">
         <Info nd={nd} setND={setNd} />
-        <Stats nd={nd} att={att} pericias={pericias} extras={extras}/>
+        <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />
-        <Combat extras={extras} nd={nd}/>
+        <Combat extras={extras} nd={nd} />
         <div className="Extras"></div>
       </div>
     </div>

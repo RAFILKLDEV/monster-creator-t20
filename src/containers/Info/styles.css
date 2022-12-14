@@ -35,3 +35,25 @@
 .Monster-Desc select {
   font-size: 1rem;
 }
+
+.Monster-Nd {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.Monster-Nd button {
+  display: none;
+  background-color: inherit;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.Monster-Nd:hover button {
+  display: flex;
+}
+
+.Monster-Nd:hover {
+  width: 100px;
+}

@@ -29,7 +29,7 @@ const Speed = (props) => {
           <button onClick={incrementar}>
             <i className="fa fa-arrow-right" aria-hidden="true"></i>
           </button>
-          <span>({Math.floor(deslocamento[speed] / 1.5)}q)</span>
+          <div>({Math.floor(deslocamento[speed] / 1.5)}q)</div>
         </div>
       </div>
     </div>

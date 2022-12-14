@@ -1,8 +1,9 @@
 import React from "react";
-import Mana from "../../components/ComboGeneric/ComboGeneric";
+import Mana from "../../components/Mana/Mana";
 import ComboLabel from "../../components/ComboLabel/ComboLabel";
 import ComboPericia from "../../components/ComboPericia/ComboPericia";
 import Speed from "../../components/Speed/Speed";
+import ComboSavingThrow from "../../components/ComboSavingThrow/ComboSavingThrow";
 import "./styles.css";
 
 export function Stats(props) {
@@ -25,12 +26,12 @@ export function Stats(props) {
       </div>
       <div className="Monster-Defense">
         <ComboLabel name="Defesa" nd={props.nd} n={3} />
-        <ComboLabel name="Fort" nd={props.nd} n={3} />
-        <ComboLabel name="Ref" nd={props.nd} n={3} />
-        <ComboLabel name="Von" nd={props.nd} n={3} />
+        <ComboSavingThrow name="Fort" nd={props.nd} />
+        <ComboSavingThrow name="Ref" nd={props.nd} />
+        <ComboSavingThrow name="Von" nd={props.nd} />
       </div>
       <div className="Monster-Hp">
-        <ComboLabel name="Pontos de Vida" nd={1} n={7} />
+        <ComboLabel name="Pontos de Vida" nd={props.nd} n={7} />
       </div>
       <div className="Monster-Extras">
         {props.extras[1].marked && <Mana name="Mana" nd={props.nd} n={7} />}

@@ -4,6 +4,20 @@ import "./styles.css";
 
 export function Info(props) {
   const [name, setName] = useState("Dragão Negro de Olhos Vermelhos");
+  const incrementar = () => {
+    if (props.nd === 20) {
+      return;
+    }
+    props.setNd(props.nd + 1);
+  };
+
+  const decrementar = () => {
+    if (props.nd === 0) {
+      return;
+    }
+    props.setNd(props.nd - 1);
+  };
+
   return (
     <div className="Info">
       <div className="Monster-Info">
@@ -13,7 +27,15 @@ export function Info(props) {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <div className="Monster-Nd">{tabela[props.nd][0]}</div>
+          <div className="Monster-Nd">
+            <button onClick={decrementar}>
+              <i className="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <div>{tabela[props.nd][0]}</div>
+            <button onClick={incrementar}>
+              <i className="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
       </div>
       <div className="Monster-Desc">

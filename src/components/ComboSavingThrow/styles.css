@@ -21,8 +21,7 @@
 }
 
 .ComboLabel-Combo {
-  display: none;
-  align-items: center;
+  display: flex;
 }
 
 .ComboLabel-Combo button {
@@ -33,6 +32,16 @@
   background-color: inherit;
   border: inherit;
   font-weight: 600;
-  display: inline-flex;
+}
+
+.ComboLabel:hover .ComboSavingThrow {
+  display: block;
   font-size: 1.2rem;
+}
+
+.ComboSavingThrow {
+  display: none;
+  border: none;
+  padding: none;
+  background-color: inherit;
 }

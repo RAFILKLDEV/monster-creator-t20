@@ -61,7 +61,7 @@ function App() {
         setExtras={setExtras}
       />
       <div className="Monster-Creator">
-        <Info nd={nd} setND={setNd} />
+        <Info nd={nd} setNd={setNd} />
         <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />

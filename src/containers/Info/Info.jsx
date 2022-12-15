@@ -4,6 +4,8 @@ import "./styles.css";
 
 export function Info(props) {
   const [name, setName] = useState("Dragão Negro de Olhos Vermelhos");
+  const [desc, setDesc] = useState("");
+
   const incrementar = () => {
     if (props.nd === 20) {
       return;
@@ -39,14 +41,15 @@ export function Info(props) {
         </div>
       </div>
       <div className="Monster-Desc">
-        <img
-          src="https://www.socialdub.com/groupspictures/7888/7888808021751257996.jpg?x2"
-          alt=""
-          width={500}
-          height={400}
+        {props.image && (
+          <img src={props.image} alt={props.name} width={500} height={400} />
+        )}
+        <textarea
+          placeholder="Descrição"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
         />
-        <textarea />
-        <div>
+        <div className="Monster-Desc-Select">
           <select>
             <option>Animais</option>
             <option>Constructos</option>

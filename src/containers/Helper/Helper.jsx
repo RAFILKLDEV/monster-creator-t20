@@ -1,16 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Extras from "../../components/Extras/Extras";
 import { Menu } from "../../components/Menu/Menu";
 import TrainedSkills from "../../components/TrainedSkills/TrainedSkills";
 import "./styles.css";
 
 export function Helper(props) {
-  const [image, setImage] = useState("");
-
   const tabImage = useRef();
   const tabTutorial = useRef();
   const tabImageBox = useRef();
-  const tabPericias = useRef();
 
   return (
     <div className="Helper">
@@ -33,16 +30,14 @@ export function Helper(props) {
         </button>
         <button
           onClick={() => {
-            setImage("");
+            props.setImage("");
           }}
         >
           Remover Foto
         </button>
-        <div ref={tabImageBox} className="Npc-Helper-Image">
-          <button onClick={() => (tabImageBox.current.style.display = "none")}>
-            Fechar
-          </button>
-          <div className="Npc-Helper-ImageBox">
+        <div ref={tabImageBox} className="Helper-Image">
+          <div className="Helper-ImageBox">
+            <div>Link</div>
             <input
               ref={tabImage}
               type="text"
@@ -50,11 +45,16 @@ export function Helper(props) {
             />
             <button
               onClick={() => {
-                setImage(tabImage.current.value);
+                props.setImage(tabImage.current.value);
                 tabImageBox.current.style.display = "none";
               }}
             >
               Confirmar
+            </button>
+            <button
+              onClick={() => (tabImageBox.current.style.display = "none")}
+            >
+              Cancelar
             </button>
           </div>
         </div>

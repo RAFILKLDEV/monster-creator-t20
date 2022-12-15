@@ -8,7 +8,8 @@ import { Helper } from "./containers/Helper/Helper";
 import "./App.css";
 
 function App() {
-  const [nd, setNd] = useState(1);
+  const [nd, setNd] = useState(0);
+  const [image, setImage] = useState("");
   const [att, setAtt] = useState({
     FOR: 0,
     DES: 0,
@@ -59,9 +60,10 @@ function App() {
         setPericias={setPericias}
         extras={extras}
         setExtras={setExtras}
+        setImage={setImage}
       />
       <div className="Monster-Creator">
-        <Info nd={nd} setNd={setNd} />
+        <Info nd={nd} setNd={setNd} image={image} />
         <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills nd={nd} att={att} pericias={pericias} />

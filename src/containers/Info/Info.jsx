@@ -3,7 +3,7 @@ import { tabela } from "../../constants";
 import "./styles.css";
 
 export function Info(props) {
-  const [name, setName] = useState("Dragão Negro de Olhos Vermelhos");
+  const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
 
   const incrementar = () => {
@@ -28,6 +28,7 @@ export function Info(props) {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Monstro"
           />
           <div className="Monster-Nd">
             <button onClick={decrementar}>

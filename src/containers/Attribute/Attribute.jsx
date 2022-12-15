@@ -20,5 +20,3 @@ export function Attribute(props) {
     </div>
   );
 }
-
-export default Attribute;

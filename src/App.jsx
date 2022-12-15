@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Attribute from "./containers/Attribute/Attribute";
+import { Attribute } from "./containers/Attribute/Attribute";
 import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
-import Skills from "./containers/Skills/Skills";
+import { Skills } from "./containers/Skills/Skills";
 import { Combat } from "./containers/Combat/Combat";
 import { Helper } from "./containers/Helper/Helper";
 import "./App.css";
@@ -62,13 +62,15 @@ function App() {
         setExtras={setExtras}
         setImage={setImage}
       />
-      <div className="Monster-Creator">
-        <Info nd={nd} setNd={setNd} image={image} />
-        <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
-        <Attribute att={att} setAtt={setAtt} />
-        <Skills nd={nd} att={att} pericias={pericias} />
-        <Combat extras={extras} nd={nd} />
-        <div className="Extras"></div>
+      <div id="Monster">
+        <div className="Monster-Creator">
+          <Info nd={nd} setNd={setNd} image={image} />
+          <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
+          <Attribute att={att} setAtt={setAtt} />
+          <Skills nd={nd} att={att} pericias={pericias} />
+          <Combat extras={extras} nd={nd} />
+          <div className="Extras"></div>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import html2canvas from "html2canvas";
 import React, { useRef } from "react";
 import Extras from "../../components/Extras/Extras";
 import { Menu } from "../../components/Menu/Menu";
@@ -94,7 +95,18 @@ export function Helper(props) {
       </Menu>
       <Menu name="Gerar Ficha">
         <div className="Npc-Helper">
-          <button onClick={() => {}}>Criar Png</button>
+          <button
+            onClick={() => {
+              html2canvas(document.getElementById("Monster"), {
+                allowTaint: true,
+              }).then(function (canvas) {
+                let html = window.open("", "Imagem de Ficha");
+                html.document.body.appendChild(canvas);
+              });
+            }}
+          >
+            Criar Png
+          </button>
         </div>
       </Menu>
     </div>

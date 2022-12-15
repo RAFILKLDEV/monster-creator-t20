@@ -37,4 +37,3 @@ export function Skills(props) {
   );
 }
 
-export default Skills;

@@ -14,47 +14,19 @@
 
 .Monster-Creator {
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
   font-size: 1.2rem;
-  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
-  background-repeat: no-repeat;
-  background-size: cover;
   flex-wrap: wrap;
-  max-height: 1000px;
-  gap: 0px;
-  width: 500px;
+  max-height: 800px;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 520px;
+  box-sizing: border-box;
+  border: var(--red) solid 3px;
+  padding: 10px;
 }
 
-.Info {
-  border: var(--red) solid 3px;
-  border-bottom: none;
-  padding: 10px 15px 10px;
-}
-
-.Stats {
-  border: var(--red) solid 3px;
-  border-bottom: none;
-  border-top: none;
-  padding: 0px 15px 10px;
-}
-
-.Attribute {
-  border: var(--red) solid 3px;
-  border-bottom: none;
-  border-top: none;
-  padding: 0px 20px 10px;
-}
-
-.Skills {
-  border: var(--red) solid 3px;
-  border-bottom: none;
-  border-top: none;
-  padding: 0px 20px 10px;
-}
-
-.Combat {
-  border: var(--red) solid 3px;
-  border-bottom: none;
-  border-top: none;
-  padding: 0px 20px 10px;
+#Monster {
+  width: auto;
 }

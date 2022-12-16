@@ -43,7 +43,11 @@ export function Info(props) {
       </div>
       <div className="Monster-Desc">
         {props.image && (
-          <img src={props.image} alt={props.name} width={500} height={400} />
+          <img
+            src={props.image}
+            alt={props.name}
+            onError=""
+          />
         )}
         <textarea
           placeholder="Descrição"

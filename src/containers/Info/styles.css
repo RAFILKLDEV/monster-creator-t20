@@ -1,13 +1,13 @@
 .Info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .Monster-Bar {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 3px var(--red) solid;
 }
 
@@ -27,9 +27,14 @@
 .Monster-Desc {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 15px;
   font-size: 1.2rem;
   border-bottom: 3px var(--red) solid;
+}
+
+.Monster-Desc img {
+  width: 250px;
 }
 
 .Monster-Desc-Select {
@@ -44,8 +49,12 @@
 }
 
 .Monster-Desc textarea {
+  width: 100%;
   border: none;
   background-color: inherit;
+  resize: none;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .Monster-Nd {

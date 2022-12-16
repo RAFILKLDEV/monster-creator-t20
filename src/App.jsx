@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Attribute } from "./containers/Attribute/Attribute";
 import { Info } from "./containers/Info/Info";
 import { Stats } from "./containers/Stats/Stats";
@@ -10,6 +10,7 @@ import "./App.css";
 function App() {
   const [nd, setNd] = useState(0);
   const [image, setImage] = useState("");
+  const monster = useRef();
   const [att, setAtt] = useState({
     FOR: 0,
     DES: 0,
@@ -53,6 +54,26 @@ function App() {
     { name: "Tesouros", marked: false, number: null },
   ]);
 
+  useEffect(() => {
+    let filhos = monster.current.children;
+    let altura = 20;
+    for (const iterator of filhos) {
+      altura = altura + iterator.offsetHeight;
+    }
+
+    if (altura > 750) {
+      for (const iterator of filhos) {
+        iterator.style.width = "calc(50% - 20px)";
+      }
+      monster.current.style.width = "1040px";
+    } else {
+      for (const iterator of filhos) {
+        iterator.style.width = "100%";
+      }
+      monster.current.style.width = "520px";
+    }
+  });
+
   return (
     <div className="App">
       <Helper
@@ -63,7 +84,7 @@ function App() {
         setImage={setImage}
       />
       <div id="Monster">
-        <div className="Monster-Creator">
+        <div className="Monster-Creator" ref={monster}>
           <Info nd={nd} setNd={setNd} image={image} />
           <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
           <Attribute att={att} setAtt={setAtt} />
@@ -71,6 +92,14 @@ function App() {
           <Combat extras={extras} nd={nd} />
           <div className="Extras"></div>
         </div>
+        {/* <div className="teste">
+          <div className="quadrado">kek</div>
+          <div className="quadrado">kek</div>
+          <div className="quadrado">kek</div>
+          <div className="quadrado">kek</div>
+          <div className="quadrado">kek</div>
+          <div className="quadrado">kek</div>
+        </div> */}
       </div>
     </div>
   );

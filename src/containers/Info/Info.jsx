@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { tabela } from "../../constants";
 import "./styles.css";
 
 export function Info(props) {
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
+  const textBox = useRef();
 
   const incrementar = () => {
     if (props.nd === 20) {
@@ -42,17 +43,16 @@ export function Info(props) {
         </div>
       </div>
       <div className="Monster-Desc">
-        {props.image && (
-          <img
-            src={props.image}
-            alt={props.name}
-            onError=""
-          />
-        )}
+        {props.image && <img src={props.image} alt={props.name} onError="" />}
         <textarea
           placeholder="Descrição"
           value={desc}
-          onChange={(e) => setDesc(e.target.value)}
+          onChange={(e) => {
+            textBox.current.style.height = "38px";
+            textBox.current.style.height = `${textBox.current.scrollHeight}px`;
+            setDesc(e.target.value);
+          }}
+          ref={textBox}
         />
         <div className="Monster-Desc-Select">
           <select>

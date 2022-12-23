@@ -9,6 +9,7 @@
   justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 3px var(--red) solid;
+  align-items: baseline;
 }
 
 .Monster-Bar input {

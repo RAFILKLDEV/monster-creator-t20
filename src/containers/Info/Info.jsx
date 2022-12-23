@@ -5,8 +5,9 @@ import "./styles.css";
 export function Info(props) {
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
+  const [especie, setEspecie] = useState("");
+  const [tipo, setTipo] = useState("");
   const textBox = useRef();
-
   const incrementar = () => {
     if (props.nd === 20) {
       return;
@@ -55,7 +56,7 @@ export function Info(props) {
           ref={textBox}
         />
         <div className="Monster-Desc-Select">
-          <select>
+          <select value={especie} onChange={(e) => setEspecie(e.target.value)}>
             <option>Animais</option>
             <option>Constructos</option>
             <option>Espiritos</option>
@@ -63,7 +64,7 @@ export function Info(props) {
             <option>Monstros</option>
             <option>Mortos-Vivos</option>
           </select>
-          <select>
+          <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
             <option>Solo</option>
             <option>Lacaio</option>
             <option>Especial</option>

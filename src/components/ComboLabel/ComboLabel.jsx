@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
-import "./styles.css"
+import "./styles.css";
 import { tabela } from "../../constants";
 
 const ComboLabel = (props) => {
   const [valor, setValor] = useState(0);
   const [input, setInput] = useState(0);
-  const [result, setResult] = useState("kek");
+  const [result, setResult] = useState("");
   const inputRef = useRef();
 
   const incrementar = () => {

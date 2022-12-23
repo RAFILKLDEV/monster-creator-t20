@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Extras from "../../components/Extras/Extras";
 import { Menu } from "../../components/Menu/Menu";
 import TrainedSkills from "../../components/TrainedSkills/TrainedSkills";
+import { changes } from "../../constants";
 import "./styles.css";
 
 export function Helper(props) {
@@ -91,6 +92,20 @@ export function Helper(props) {
               index={i}
             />
           ))}
+        </div>
+      </Menu>
+      <Menu name="Mudanças">
+        <div>
+          {changes.map((e) => {
+            if (e.valor === 2) {
+              return null;
+            } else
+              return (
+                <div>
+                  {e.name}: {e.valor}
+                </div>
+              );
+          })}
         </div>
       </Menu>
       <Menu name="Gerar Ficha">

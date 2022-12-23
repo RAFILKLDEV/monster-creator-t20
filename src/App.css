@@ -32,20 +32,3 @@
 .Monster-Creator > * {
   width: 100%;
 }
-
-.teste {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  gap: 20px;
-  height: 700px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.quadrado {
-  width: calc(50% - 20px);
-  height: 200px;
-  background-color: aqua;
-  text-align: center;
-}

@@ -57,3 +57,26 @@ export const pericias = [
 ];
 
 export const deslocamento = [4.5, 6, 9, 12, 15, 18, 24, 36];
+
+export function calcChanges(nd, n, valor, result) {
+  let total = 0;
+  for (let index = 0; tabela[nd][index] <= result; index++) {
+    total++;
+  }
+
+  if (total !== 0) {
+  }
+}
+
+export let changes = [
+  // 0 Indice 1 B.ATA 2 Dano.M 3 Defesa 4 R.FORTE 5 R.MEDIA 6 R.FRACA 7 PV 8 CD
+  { name: "B.Ataque", valor: 0 },
+  { name: "Dano", valor: 0 },
+  { name: "Defesa", valor: 0 },
+  { name: "R.Forte", valor: 0 },
+  { name: "R.Media", valor: 0 },
+  { name: "R.Fraca", valor: 0 },
+  { name: "Pv", valor: 0 },
+  { name: "Cd", valor: 0 },
+  { name: "Habilidades", valor: 0 },
+];

@@ -10,6 +10,10 @@ import "./App.css";
 function App() {
   const [nd, setNd] = useState(0);
   const [image, setImage] = useState("");
+  const [saveInfo, setSaveInfo] = useState({
+    usuario: {},
+    monster: {},
+  });
   const monster = useRef();
   const [att, setAtt] = useState({
     FOR: 0,
@@ -85,21 +89,23 @@ function App() {
       />
       <div id="Monster">
         <div className="Monster-Creator" ref={monster}>
-          <Info nd={nd} setNd={setNd} image={image} />
+          <Info
+            nd={nd}
+            setNd={setNd}
+            image={image}
+            salvar={{ saveInfo, setSaveInfo }}
+          />
           <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
           <Attribute att={att} setAtt={setAtt} />
-          <Skills nd={nd} att={att} pericias={pericias} />
+          <Skills
+            salvar={{ saveInfo, setSaveInfo }}
+            nd={nd}
+            att={att}
+            pericias={pericias}
+          />
           <Combat extras={extras} nd={nd} />
           <div className="Extras"></div>
         </div>
-        {/* <div className="teste">
-          <div className="quadrado">kek</div>
-          <div className="quadrado">kek</div>
-          <div className="quadrado">kek</div>
-          <div className="quadrado">kek</div>
-          <div className="quadrado">kek</div>
-          <div className="quadrado">kek</div>
-        </div> */}
       </div>
     </div>
   );
